@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Problem 2 | Missing Transitive Pairs</title>
+        <style>
+            body {
+                margin: 100px 100px 100px 150px;
+
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <h1>Problem 2: Missing Transitive Pairs</h1>
+        <h3>Description</h3>
+        <p>
+                                                                                                            <br/>
+            Transitive relation is a special type of relation in Mathematics. A relation R on set X is      <br/>
+            transitive if for all elements a,b,c in X, whenever R relates a to b and b to c, R must relate  <br/>
+            a to c. As a non-mathematical example, the relation "is an ancestor of" is transitive. For      <br/>
+            example, if Amy is an ancestor of Becky, and Becky is an ancestor of Carrie, then Amy, too, is  <br/>
+            an ancestor of Carrie.                                                                          <br/>
+            <br/>
+            Now, for the purpose of this problem we denote the symbol T as the transitive relation operator <br/>
+            between two operands i.e. numbers. Now, let's say X = {1, 2, 3, 4, 5, 6, 7}. A relation R is    <br/>
+            R is given bellow:                                                                              <br/>
+            <br/>
+            R = (1T2, 2T3, 4T7, 7T5, 7T6). According to the definition, R is NOT a transitive relation      <br/>
+            because if 1T2 and 2T3, there must be 1T3 in R which is missing. Similarly the other 2 missing  <br/>
+            pairs are 4T5 and 4T6.                                                                          <br/>
+            <br/>
+            In this problem, you will be given a relation R. You have to find out the missing pairs for R   <br/>
+            to be transitive. 
+
+        </p>
+        <br/>
+
+        <h3>Input</h3>
+        <p>
+            The first line of input consists of an integer n where 0 < n <= 10000. The following n lines    <br/>
+            will consist of a string as a pattern of relation such as '1T2', '533T612'.                     <br/>  
+        </p>
+        <br/>
+
+        <h3>Output</h3>
+        <p>
+            You have to print the missing pairs in xTy format, single pair in a line and must follow the    <br/>
+            following rules:                                                                                <br/>
+            <br/>
+            1.  Between two pairs xTy and wTz, if x > w, print pair xTy before pair wTz.                    <br/>
+            2.  Between two pairs xTy and xTz, if y > z print pair xTy before pair xTz.                     <br/>
+            3.  If there is NO missing pair, print <b>No missing pair</b>                                   <br/>
+
+        </p>
+        <br/>
+
+        <h3>Sample Input 1</h3>
+        <p>
+            5
+            1T2
+            2T3
+            4T7
+            7T5
+            7T6
+        </p>
+        <br/>
+
+        <h3>Sample Output 1</h3>
+        <p>
+            1T3
+            4T6
+            4T5
+        </p>
+        <br/>
+
+        <h3>Sample Input 2</h3>
+        <p>
+            4
+            1T2
+            2T3
+            1T3
+            5T6 
+        </p>
+        <br/>
+
+        <h3>Sample Output 2</h3>
+        <p>
+            No missing pair 
+        </p>
+        <br/>
+
+    </body>
+</html>
