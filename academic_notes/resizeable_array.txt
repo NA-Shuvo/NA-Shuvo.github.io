@@ -1,0 +1,60 @@
+
+
+                                                                                    #
+
+Constructing A Resize-able Array In C 
+
+The built-in array in C is static: non-shiftable and non resize-able. Moreover, its
+data type is fixed. So, how can we make it more flexible in terms of size and shift-
+ability? In this article we will try to construct a resize-able array in C. 
+
+Resize-able array: An array is resize-able if its size is not static. A programmer
+can change its size with simple operations. Resize-ability offers the following
+advantages:
+
+-   increase or decrease the size with the necessity.
+-   shift-ability.   
+
+Shiftable array: An array is shiftable if elements from anywhere of the array can 
+be removed or added with simple operations.
+
+The roadmap of the construction:
+
+1.  Creating a global linked list. Its head and tail must be global.
+2.  Define the following functions:
+    -   append              :   add new elemet at tail
+    -   add_element(pos)    :   add new element at pos
+    -   remove              :   remove elements from tail
+    -   delete(pos)         :   delete an element from pos.
+
+
+Creating a linked list
+
+We can create a linked list with the help of structure. C provides a simple way
+to create user defined data type with struct keyword. The node definition of a
+a linked list might look like the following:
+
+struct Node
+{
+    int data;
+    struct Node* next; 
+};
+
+//global variables
+
+struct Node* head, tail;
+int size = 0; 
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright: Nasim Ahmed.
+Anybody can use, copy, circulate this article without any permission. Thank you.
